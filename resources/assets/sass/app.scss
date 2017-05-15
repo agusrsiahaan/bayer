@@ -7,3 +7,15 @@
 
 // Bootstrap
 @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+
+body{
+	font-family: 'Poppins', sans-serif !important;
+	font-size: 13px !important;
+	color: #fff !important;
+	background-color: #0090c5
+}
+
+a{
+	color: #fff !important;
+	text-decoration: none
+}

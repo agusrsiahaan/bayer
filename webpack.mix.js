@@ -15,5 +15,10 @@ mix.js('resources/assets/js/app.js', 'public/js')
    .sass('resources/assets/sass/app.scss', 'public/css')
    .copy('node_modules/fullpage.js/dist/jquery.fullpage.min.js', 'public/js/fullPage')
    .copy('node_modules/fullpage.js/vendors/jquery.slimscroll.min.js', 'public/js/fullPage')
+
    .copy('node_modules/fullpage.js/dist/jquery.fullpage.min.css', 'public/css/fullPage')
+   .sass('resources/assets/sass/landing.scss', 'public/css/landing.css')
+   
+   .copy('resources/assets/images', 'public/images')
+   .version()
    ;

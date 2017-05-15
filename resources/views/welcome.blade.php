@@ -12,58 +12,10 @@
 
         <link rel="stylesheet" href="{{ mix('/css/app.css') }}">
         <link rel="stylesheet" type="text/css" href="/css/fullPage/jquery.fullPage.min.css">
+        <link rel="stylesheet" type="text/css" href="{{ mix('/css/landing.css') }}">
 
         <style type="text/css">
-            /* Style for our header texts
-            * --------------------------------------- */
-            h1{
-                font-size: 5em;
-                font-family: arial,helvetica;
-                color: #fff;
-                margin:0;
-                padding:0;
-            }
-            .intro p{
-                color: #fff;
-            }
-
-            /* Centered texts in each section
-            * --------------------------------------- */
-            .section{
-                text-align:center;
-            }
-
-            /* Fixed header and footer.
-            * --------------------------------------- */
-            #header, #footer{
-                position:fixed;
-                height: 50px;
-                display:block;
-                width: 100%;
-                background: #333;
-                z-index:9;
-                text-align:center;
-                color: #f2f2f2;
-                padding: 20px 0 0 0;
-            }
-
-            #header{
-                top:0px;
-            }
-            #footer{
-                bottom:0px;
-            }
-
-
-            /* Bottom menu
-            * --------------------------------------- */
-            #infoMenu {
-                bottom: 80px;
-            }
-            #infoMenu li a {
-                color: #fff;
-                z-index: 999;
-            }
+           
         </style>
 
         <!--[if IE]>
@@ -75,51 +27,222 @@
     <body>
     
         <div id="app">
-            <div id="header">Header</div>
-            <!-- <div id="footer">Footer</div> -->
+            <div id="header">
+                <div class="container">
+                    <nav class="navbar">
+                        <div class="container-fluid">
+                          <div class="navbar-header">
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                              <span class="sr-only">Toggle navigation</span>
+                              <span class="icon-bar"></span>
+                              <span class="icon-bar"></span>
+                              <span class="icon-bar"></span>
+                            </button>
+                            <a class="navbar-brand" href="#">
+                                <img class="img-responsive" src="/images/logo1.png">
+                            </a>
+                          </div>
+                          <div id="navbar" class="navbar-collapse collapse">
+                            <ul class="nav navbar-nav">
+                              <li class="active"><a href="#">Home</a></li>
+                              <li><a href="#">About</a></li>
+                              <li><a href="#">Rewards</a></li>
+                              <li><a href="#">FAQ</a></li>
+                              <li><a href="#">Contact</a></li>
+                            
+                            </ul>
+                            <!-- <ul class="nav navbar-nav navbar-right">
+                              <li class="active"><a href="./">Default <span class="sr-only">(current)</span></a></li>
+                              <li><a href="../navbar-static-top/">Static top</a></li>
+                              <li><a href="../navbar-fixed-top/">Fixed top</a></li>
+                            </ul> -->
+                          </div><!--/.nav-collapse -->
+
+                        </div><!--/.container-fluid -->
+                    </nav>
+                </div>
+            </div>
 
             <div id="fullpage">
                 <div class="section " id="section0">
-                    <div class="intro">
-                        <h1>Fixed elements</h1>
-                        <p>Create your own headers and footers</p>
+                    <div class="container">
+                        <div class="row intro">
+                            <div class="col-md-12">
+                                <div class="intro-title">
+                                    <h1>
+                                        Bayer Global
+                                    </h1>
+                                    <h1>
+                                        Reward
+                                    </h1>
+                                    <h1>
+                                        Experience
+                                    </h1>
+                                </div>
+                                <div class="intro-link">
+                                    <p>
+                                        <a href="">FIND OUT MORE</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row tabs">
+                            <div class="col-md-4">
+                                <h2>Join Easily</h2>
+                                Getting rewarded should be as simple as 1, 2, 3. Sign up in a snap. 
+                            </div>
+                            <div class="col-md-4">
+                                <h2>Rack Up The Points</h2>
+                                Watch the points rain in by just buying things you are already buying. 
+                            </div>
+                            <div class="col-md-4">
+                                <h2>Redeem Goodies</h2>
+                                Start baggin’ those good stuffs from electronics to more Bayer products for your business needs!
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="section" id="section1">
-                    <div class="slide" id="slide1">
-                        <div class="intro">
-                            <h1>About using CSS3</h1>
-                            <p>
-                                You will need to place your header and footer outside the plugin's wrapper.
-                                This way it won't move on scrolling. Take a look at the source code of this page.
-                            </p>
-                        </div>
+                     <div class="intro">
+                        <h1>SECTION 2</h1>
                     </div>
-
-                    <div class="slide" id="slide2">
-                        <h1>Slide 2</h1>
-                    </div>
-
                 </div>
                 <div class="section" id="section2">
-                    <div class="intro">
-                        <h1>Enjoy it</h1>
+                    <div class="container">
+                        <div class="row intro">
+                            <div class="col-md-12">
+                                <div class="intro-title">
+                                    <h1>
+                                        Awesome
+                                    </h1>
+                                    <h1>
+                                        Benefits All
+                                    </h1>
+                                    <h1>
+                                        Your Around
+                                    </h1>
+                                </div>
+                                <div class="intro-link">
+                                    <p>
+                                        <a href="">FIND OUT MORE</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row benefits">
+                            <div class="col-md-3">
+                                <div class="icon">
+                                    <img class="img-responsive" src="/images/benefit-1.png">
+                                </div>
+                                <p class="description">
+                                    1 BD$ per $1 spent on every purchase
+                                </p>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="icon">
+                                    <img class="img-responsive" src="/images/benefit-2.png">
+                                </div>
+                                <p class="description">
+                                    Up to 20x the points on orders on Bayer Promo Items
+                                </p>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="icon">
+                                    <img class="img-responsive" src="/images/benefit-3.png">
+                                </div>
+                                <p class="description">
+                                    Enjoy welcome reward upon signing in for the first time
+                                </p>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="icon">
+                                    <img class="img-responsive" src="/images/benefit-4.png">
+                                </div>
+                                <p class="description">
+                                    Chance to win a trip of a lifetime upon enrollment
+                                </p>
+                            </div>
+                        </div>
                     </div>
+                </div>
+                <div class="section fp-auto-height footer" id="section3">
+                   <div class="container">
+                       <div class="row">
+                           <div class="col-md-6">
+                               <div class="country-selection">
+                                    <h4>Country</h4>
+                                    <ul class="list-inline">
+                                       <li>
+                                           <a href="">Indonesia</a>
+                                       </li>
+                                       <li>
+                                           <a href="">Korea</a>
+                                       </li>
+                                       <li>
+                                           <a href="">Malaysia</a>
+                                       </li>
+                                       <li>
+                                           <a href="">Thailand</a>
+                                       </li>
+                                    </ul>
+                               </div>
+                           </div>
+                           <div class="col-md-6">
+                               <div class="language-selection">
+                                   <select class="form-control">
+                                       <option>English</option>
+                                   </select>
+                               </div>
+                           </div>
+                       </div>
+                       <hr class="spacer">
+                       <div class="row footer-two">
+                           <div class="col-md-6">
+                               <img class="img-responsive logo-on-footer" src="/images/logo1.png">
+                               <p>
+                                    <span class="copyright">
+                                        Copyright © Bayer AG.
+                                    </span><br />
+                                    <span>
+                                        Last updated: February 22, 2017
+                                    </span>
+                               </p>
+                           </div>
+                           <div class="col-md-6 text-right footer-nav">
+                                <ul class="list-inline">
+                                   <li>
+                                       <a href="">Bayer Global</a>
+                                   </li>
+                                   <li class="divider">|</li>
+                                   <li>
+                                       <a href="">General Term of Use</a>
+                                   </li>
+                                   <li class="divider">|</li>
+                                   <li>
+                                       <a href="">Privacy Statement</a>
+                                   </li>
+                                   <li class="divider">|</li>
+                                   <li>
+                                       <a href="">Imprint</a>
+                                   </li>
+                                </ul>
+                           </div>
+                       </div>
+                   </div>
                 </div>
             </div>
         </div>
 
         <script src="{{ mix('/js/app.js') }}"></script>
 
-        <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
         <script src="/js/fullPage/jquery.slimscroll.min.js"></script>
         <script src="/js/fullPage/jquery.fullPage.min.js"></script>
 
         <script type="text/javascript">
             $(document).ready(function() {
                 $('#fullpage').fullpage({
-                    anchors: ['firstPage', 'secondPage', '3rdPage'],
-                    sectionsColor: ['#C63D0F', '#1BBC9B', '#7E8F7C'],
+                    //anchors: ['firstPage', 'secondPage', '3rdPage'],
+                    sectionsColor: ['#0090c5', '#0090c5', '#0090c5'],
                     css3: true
                 });
             });
