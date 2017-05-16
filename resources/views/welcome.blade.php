@@ -12,7 +12,7 @@
         <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 
         <link rel="stylesheet" href="{{ mix('/css/app.css') }}">
-        <link rel="stylesheet" type="text/css" href="/css/fullPage/jquery.fullPage.min.css">
+        <link rel="stylesheet" type="text/css" href="{{ mix('/css/vendor.css') }}">
         <link rel="stylesheet" type="text/css" href="{{ mix('/css/landing.css') }}">
 
         <style type="text/css">
@@ -26,12 +26,15 @@
         <![endif]-->
     </head>
     <body>
-    
+        <a href="javascript:" id="return-to-top"><i class="fa fa-arrow-up" aria-hidden="true"></i></a>
         <div id="app">
             <div id="header">
-                <div class="container">
+                <div class="container-fluid">
+                    <a class="brand brand-left" href="#">
+                        <img class="img-responsive" src="/images/logo1.png">
+                    </a>
                     <nav class="navbar">
-                        <div class="container-fluid">
+                        <div class="container">
                           <div class="navbar-header">
                             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
                               <span class="sr-only">Toggle navigation</span>
@@ -39,12 +42,12 @@
                               <span class="icon-bar"></span>
                               <span class="icon-bar"></span>
                             </button>
-                            <a class="navbar-brand" href="#">
+                           <!--  <a class="navbar-brand" href="#">
                                 <img class="img-responsive" src="/images/logo1.png">
-                            </a>
+                            </a> -->
                           </div>
                           <div id="navbar" class="navbar-collapse collapse">
-                            <ul class="nav navbar-nav">
+                            <ul class="nav navbar-nav navbar-left">
                               <li class="active"><a href="#">Home</a></li>
                               <li><a href="#">About</a></li>
                               <li><a href="#">Rewards</a></li>
@@ -61,6 +64,10 @@
 
                         </div><!--/.container-fluid -->
                     </nav>
+
+                     <a class="brand brand-right" href="#">
+                        <img class="img-responsive" src="/images/logo2.png">
+                    </a>
                 </div>
             </div>
 
@@ -82,7 +89,7 @@
                                 </div>
                                 <div class="intro-link">
                                     <p>
-                                        <a href="">FIND OUT MORE</a>
+                                        <a class="find-more" href="">FIND OUT MORE <span><i class="fa fa-2x fa-arrow-right" aria-hidden="true"></i></span></a>
                                     </p>
                                 </div>
                             </div>
@@ -104,8 +111,35 @@
                     </div>
                 </div>
                 <div class="section" id="section1">
-                     <div class="intro">
-                        <h1>SECTION 2</h1>
+                    <div class="container">
+                        <div class="row intro">
+                            <div class="intro-title text-center">
+                                <h1>How Bayer Plus Works:</h1>
+                            </div>
+                        </div>
+                        <div class="row bayer-steps">
+                            <div class="col-md-4">
+                                <img class="img-responsive" src="/images/step-1.png">
+                                <h3>Snap a Picture</h3>
+                                <p class="description">
+                                    Snap a Picture
+                                </p>
+                            </div>
+                            <div class="col-md-4">
+                                <img class="img-responsive" src="/images/step-2.png">
+                                <h3>Select Product</h3>
+                                <p class="description">
+                                    Select your desired item from the extensive list of products available
+                                </p>
+                            </div>
+                            <div class="col-md-4">
+                                <img class="img-responsive" src="/images/step-3.png">
+                                <h3>Sit Back and Relax</h3>
+                                <p class="description">
+                                    Sit Back and Relax
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="section" id="section2">
@@ -125,7 +159,7 @@
                                 </div>
                                 <div class="intro-link">
                                     <p>
-                                        <a href="">FIND OUT MORE</a>
+                                        <a class="find-more" href="">FIND OUT MORE <span><i class="fa fa-2x fa-arrow-right" aria-hidden="true"></i></span></a>
                                     </p>
                                 </div>
                             </div>
@@ -169,7 +203,7 @@
                 <div class="section fp-auto-height footer" id="section3">
                    <div class="container">
                        <div class="row">
-                           <div class="col-md-6">
+                           <div class="col-md-8">
                                <div class="country-selection">
                                     <h4>Country</h4>
                                     <ul class="list-inline">
@@ -188,9 +222,11 @@
                                     </ul>
                                </div>
                            </div>
-                           <div class="col-md-6">
+                           <div class="col-md-4">
                                <div class="language-selection">
                                    <select class="form-control">
+                                       <option>English</option>
+                                       <option>Indonesia</option>
                                        <option>English</option>
                                    </select>
                                </div>
@@ -232,21 +268,52 @@
                    </div>
                 </div>
             </div>
-        </div>
 
+        </div>
+        
         <script src="{{ mix('/js/app.js') }}"></script>
 
-        <script src="/js/fullPage/jquery.slimscroll.min.js"></script>
-        <script src="/js/fullPage/jquery.fullPage.min.js"></script>
+       <!--  <script src="/js/fullPage/jquery.slimscroll.min.js"></script>
+        <script src="/js/fullPage/jquery.fullPage.min.js"></script> -->
+
+        <script src="{{ mix('/js/vendor.js') }}"></script>
 
         <script type="text/javascript">
             $(document).ready(function() {
                 $('#fullpage').fullpage({
                     //anchors: ['firstPage', 'secondPage', '3rdPage'],
                     sectionsColor: ['#0090c5', '#0090c5', '#0090c5'],
-                    css3: true
+                    css3: true,
+                    afterLoad: function(anchorLink, index){
+                        var loadedSection = $(this);
+
+                        //using index
+                        if(index >= 2){
+                            $('#return-to-top').fadeIn(200); 
+
+                            $('#return-to-top').click(function() {
+                                // $('body,html').animate({
+                                //     scrollTop : 0
+                                // }, 500);
+
+                                $.fn.fullpage.moveTo(1);
+                            });
+
+                        }else{
+                            $('#return-to-top').fadeOut(200);
+                        }
+
+                    },
+                    afterRender: function(){
+                       
+                    }
                 });
+
+
+
             });
+
+
         </script>
     </body>
 </html>
