@@ -10,6 +10,9 @@
 .find-more{
 	display: table-cell;
 	vertical-align: middle;
+	position: relative;
+	height: 31px;
+	line-height: 31px;
 
 	span{
 		display: inline-block;
@@ -18,19 +21,39 @@
 	}
 }
 
+.find-more::after{
+	content: url('images/findmore-arrow.png');
+	position: absolute;
+	margin-left: 10px
+}
+
 #section0{
 	background: url('images/bg-section-1.png') no-repeat 60% 40%;
+}
+
+#section1{
+	.intro-title{
+		margin-bottom: 0
+	}
+
+	.bayer-steps{
+		.step img{
+			height: 200px
+		}
+	}
 }
 
 #section2{
 	background: url('images/delivery-man.png') no-repeat 80% 32%;
 }
+
 #section0 .intro h1, #section2 .intro h1{
 	font-size: 72px;
 	margin: 0;
 	padding: 0;
 	font-weight: 300
 }
+
 #section0 .tabs h2{
 	font-size: 18px;
 	font-weight: 600;

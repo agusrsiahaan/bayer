@@ -89,7 +89,7 @@
                                 </div>
                                 <div class="intro-link">
                                     <p>
-                                        <a class="find-more" href="">FIND OUT MORE <span><i class="fa fa-2x fa-arrow-right" aria-hidden="true"></i></span></a>
+                                        <a class="find-more" href="">FIND OUT MORE</a>
                                     </p>
                                 </div>
                             </div>
@@ -118,21 +118,21 @@
                             </div>
                         </div>
                         <div class="row bayer-steps">
-                            <div class="col-md-4">
+                            <div class="step col-md-4">
                                 <img class="img-responsive" src="/images/step-1.png">
                                 <h3>Snap a Picture</h3>
                                 <p class="description">
                                     Snap a Picture
                                 </p>
                             </div>
-                            <div class="col-md-4">
+                            <div class="step col-md-4">
                                 <img class="img-responsive" src="/images/step-2.png">
                                 <h3>Select Product</h3>
                                 <p class="description">
                                     Select your desired item from the extensive list of products available
                                 </p>
                             </div>
-                            <div class="col-md-4">
+                            <div class="step col-md-4">
                                 <img class="img-responsive" src="/images/step-3.png">
                                 <h3>Sit Back and Relax</h3>
                                 <p class="description">
@@ -159,7 +159,7 @@
                                 </div>
                                 <div class="intro-link">
                                     <p>
-                                        <a class="find-more" href="">FIND OUT MORE <span><i class="fa fa-2x fa-arrow-right" aria-hidden="true"></i></span></a>
+                                        <a class="find-more" href="">FIND OUT MORE</a>
                                     </p>
                                 </div>
                             </div>
@@ -305,7 +305,12 @@
 
                     },
                     afterRender: function(){
-                       
+                        $('.bayer-steps').slick({
+                          centerMode: true,
+                          centerPadding: '60px',
+                          slidesToShow: 3,
+                          // arrows: true
+                        });
                     }
                 });
 
