@@ -9,6 +9,7 @@
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 
         <link rel="stylesheet" href="{{ mix('/css/app.css') }}">
         <link rel="stylesheet" type="text/css" href="/css/fullPage/jquery.fullPage.min.css">
@@ -51,11 +52,11 @@
                               <li><a href="#">Contact</a></li>
                             
                             </ul>
-                            <!-- <ul class="nav navbar-nav navbar-right">
-                              <li class="active"><a href="./">Default <span class="sr-only">(current)</span></a></li>
-                              <li><a href="../navbar-static-top/">Static top</a></li>
-                              <li><a href="../navbar-fixed-top/">Fixed top</a></li>
-                            </ul> -->
+                            <ul class="nav navbar-nav navbar-right">
+                              <li class="join"><a class="" href="#">JOIN</a></li>
+                              <li class="signin"><a class="btn" href="#">SIGN IN</a></li>
+                              <li class="upload-invoice"><a class="btn" href="#"><i class="fa fa-file-text-o" aria-hidden="true"></i> UPLOAD INVOICE</a></li>
+                            </ul>
                           </div><!--/.nav-collapse -->
 
                         </div><!--/.container-fluid -->
