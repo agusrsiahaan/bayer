@@ -13,6 +13,7 @@
 
         <link rel="stylesheet" href="{{ mix('/css/app.css') }}">
         <link rel="stylesheet" type="text/css" href="{{ mix('/css/vendor.css') }}">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
         <link rel="stylesheet" type="text/css" href="{{ mix('/css/landing.css') }}">
 
         <style type="text/css">
@@ -72,18 +73,18 @@
             </div>
 
             <div id="fullpage">
-                <div class="section " id="section0">
+                <div class="section first" id="section0">
                     <div class="container">
                         <div class="row intro">
                             <div class="col-md-12">
                                 <div class="intro-title">
-                                    <h1>
+                                    <h1 class="is-animated">
                                         Bayer Global
                                     </h1>
-                                    <h1>
+                                    <h1 class="is-animated">
                                         Reward
                                     </h1>
-                                    <h1>
+                                    <h1 class="is-animated">
                                         Experience
                                     </h1>
                                 </div>
@@ -110,9 +111,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="section" id="section1">
+                <div class="section second" id="section1">
                     <div class="container">
-                        <div class="row intro">
+                        <div class="row intro is-animated">
                             <div class="intro-title text-center">
                                 <h1>How Bayer Plus Works:</h1>
                             </div>
@@ -142,18 +143,18 @@
                         </div>
                     </div>
                 </div>
-                <div class="section" id="section2">
+                <div class="section third" id="section2">
                     <div class="container">
                         <div class="row intro">
                             <div class="col-md-12">
                                 <div class="intro-title">
-                                    <h1>
+                                    <h1 class="is-animated">
                                         Awesome
                                     </h1>
-                                    <h1>
+                                    <h1 class="is-animated">
                                         Benefits All
                                     </h1>
-                                    <h1>
+                                    <h1 class="is-animated">
                                         Your Around
                                     </h1>
                                 </div>
@@ -280,6 +281,12 @@
 
         <script type="text/javascript">
             $(document).ready(function() {
+                var $isAnimatedFirst = $('.first .is-animated'),
+                $isAnimatedSecond = $('.second .is-animated'),
+                $isAnimatedSecondSingle = $('.second .is-animated__single'),
+                $isAnimatedThird = $('.third .is-animated'),
+                $isAnimatedThirdSingle = $('.third .is-animated__single');
+
                 $('#fullpage').fullpage({
                     //anchors: ['firstPage', 'secondPage', '3rdPage'],
                     sectionsColor: ['#0090c5', '#0090c5', '#0090c5'],
@@ -303,6 +310,23 @@
                             $('#return-to-top').fadeOut(200);
                         }
 
+                        $isAnimatedFirst.addClass('animated fadeInUp');
+                        $isAnimatedFirst.eq(0).css('animation-delay', '.3s');
+                        $isAnimatedFirst.eq(1).css('animation-delay', '.6s');
+                        $isAnimatedFirst.eq(2).css('animation-delay', '.9s');
+
+                    },
+                    onLeave: function(index, nextIndex, direction) {
+                        if( index == 1 && nextIndex == 2 ) { 
+                            $isAnimatedSecond.addClass('animated fadeInUp'); 
+                        }
+
+                        if( (index == 1 || index == 2) && nextIndex == 3 ) { console.log('gan');
+                            $isAnimatedThird.addClass('animated fadeInUp');
+                            $isAnimatedThird.eq(0).css('animation-delay', '.3s');
+                            $isAnimatedThird.eq(1).css('animation-delay', '.6s');
+                            $isAnimatedThird.eq(2).css('animation-delay', '.9s');
+                        }
                     },
                     afterRender: function(){
                         $('.bayer-steps').slick({

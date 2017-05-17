@@ -22,6 +22,7 @@
     "webpack-dev-server": "^2.4.5"
   },
   "dependencies": {
+    "animate.css": "^3.5.2",
     "fullpage.js": "^2.9.4",
     "slick-carousel": "^1.6.0"
   }
