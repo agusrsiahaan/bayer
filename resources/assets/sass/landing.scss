@@ -44,7 +44,7 @@
 }
 
 #section2{
-	background: url('images/delivery-man.png') no-repeat 80% 32%;
+	background: url('images/delivery-man.png') no-repeat 75% 32%;
 }
 
 #section0 .intro h1, #section2 .intro h1{
@@ -236,6 +236,7 @@
 
 	.language-selection {
 
+		cursor: pointer;
 	   	width: 100%;
 	   	position: relative;
    		margin-top: 15px;
@@ -252,7 +253,7 @@
 	        height: 45px;
 	        border: 1px solid #7e7e7e;
 	        //text-indent: 0.01px;     
-	        text-overflow: '';
+	        cursor: pointer;
 	        -webkit-appearance: button; /* hide default arrow in chrome OSX */
 	        :focus {
 	            outline: none;

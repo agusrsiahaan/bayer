@@ -115,7 +115,7 @@
                     <div class="container">
                         <div class="row intro is-animated">
                             <div class="intro-title text-center">
-                                <h1>How Bayer Plus Works:</h1>
+                                <h1>How Bayer Plus Works</h1>
                             </div>
                         </div>
                         <div class="row bayer-steps">
@@ -321,7 +321,7 @@
                             $isAnimatedSecond.addClass('animated fadeInUp'); 
                         }
 
-                        if( (index == 1 || index == 2) && nextIndex == 3 ) { console.log('gan');
+                        if( (index == 1 || index == 2) && nextIndex == 3 ) {
                             $isAnimatedThird.addClass('animated fadeInUp');
                             $isAnimatedThird.eq(0).css('animation-delay', '.3s');
                             $isAnimatedThird.eq(1).css('animation-delay', '.6s');
@@ -333,8 +333,12 @@
                           centerMode: true,
                           centerPadding: '60px',
                           slidesToShow: 3,
-                          // arrows: true
+                          arrows: false,
+                          prevArrow: '<button type="button" class="slick-prev">Previous</button>',
+                          nextArrow: '<button type="button" class="slick-next">Next</button>',
+                          autoplay: true
                         });
+
                     }
                 });
 
