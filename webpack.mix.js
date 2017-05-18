@@ -1,17 +1,18 @@
 const { mix } = require('laravel-mix');
 
+
 const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 
-mix.webpackConfig({
-  plugins: [
-    new BrowserSyncPlugin({
-      open: 'external',
-      host: 'bayer.dev',
-      proxy: 'bayer.dev',
-      files: ['resources/views/**/*.php', 'app/**/*.php', 'routes/**/*.php']
-    })
-    ]
-});
+// mix.webpackConfig({
+//   plugins: [
+//     new BrowserSyncPlugin({
+//       open: 'external',
+//       host: 'bayer.dev',
+//       proxy: 'bayer.dev',
+//       files: ['resources/views/**/*.php', 'app/**/*.php', 'routes/**/*.php'],
+//     })
+//     ]
+// });
 
 /*
  |--------------------------------------------------------------------------
@@ -33,15 +34,15 @@ mix.js('resources/assets/js/app.js', 'public/js')
    .scripts([
 		'node_modules/fullpage.js/dist/jquery.fullpage.min.js',
 		'node_modules/fullpage.js/vendors/jquery.slimscroll.min.js',
-		'node_modules/slick-carousel/slick/slick.min.js'
+		//'node_modules/slick-carousel/slick/slick.min.js'
    	], 'public/js/vendor.js')
 
    // .copy('node_modules/fullpage.js/dist/jquery.fullpage.min.css', 'public/css/fullPage')
 
    .styles([
 		'node_modules/fullpage.js/dist/jquery.fullpage.min.css',
-		'node_modules/slick-carousel/slick/slick.css',
-		'node_modules/slick-carousel/slick/slick-theme.css'
+		//'node_modules/slick-carousel/slick/slick.css',
+		//'node_modules/slick-carousel/slick/slick-theme.css'
    	], 'public/css/vendor.css')
 
    .sass('resources/assets/sass/landing.scss', 'public/css/landing.css')

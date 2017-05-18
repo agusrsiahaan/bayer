@@ -13,6 +13,8 @@
         <link rel="stylesheet" href="{{ mix('/css/app.css') }}">
         <link rel="stylesheet" type="text/css" href="{{ mix('/css/vendor.css') }}">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.carousel.min.css">
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.theme.default.min.css">
         <link rel="stylesheet" type="text/css" href="{{ mix('/css/landing.css') }}">
 
         <style type="text/css">
@@ -88,10 +90,16 @@
                                     </h1>
                                 </div>
                                 <div class="intro-link">
-                                    <p>
-                                        <a class="find-more" href="">FIND OUT MORE</a>
-                                    </p>
+                                    <!-- <a class="find-more" href="">FIND OUT MORE</a> -->
+                                    <!-- <a class="find-more" href="">FIND OUT MORE <span class="icon-right"></span></a> -->
+
+                                    <button class="find-more">FIND OUT MORE<span class="icon-right"></span><span class="icon-right after"></span></button>
                                 </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="divider">&nbsp;</div>
                             </div>
                         </div>
                         <div class="row tabs">
@@ -117,22 +125,22 @@
                                 <h1>How Bayer Plus Works</h1>
                             </div>
                         </div>
-                        <div class="row bayer-steps">
-                            <div class="step col-md-4">
+                        <div class="row bayer-steps owl-carousel owl-theme">
+                            <div class="step oc-item">
                                 <img class="img-responsive" src="/images/step-1.png">
                                 <h3>Snap a Picture</h3>
                                 <p class="description">
                                     Snap a Picture
                                 </p>
                             </div>
-                            <div class="step col-md-4">
+                            <div class="step oc-item">
                                 <img class="img-responsive" src="/images/step-2.png">
                                 <h3>Select Product</h3>
                                 <p class="description">
                                     Select your desired item from the extensive list of products available
                                 </p>
                             </div>
-                            <div class="step col-md-4">
+                            <div class="step oc-item">
                                 <img class="img-responsive" src="/images/step-3.png">
                                 <h3>Sit Back and Relax</h3>
                                 <p class="description">
@@ -140,6 +148,8 @@
                                 </p>
                             </div>
                         </div>
+
+
                     </div>
                 </div>
                 <div class="section third" id="section2">
@@ -158,9 +168,8 @@
                                     </h1>
                                 </div>
                                 <div class="intro-link">
-                                    <p>
-                                        <a class="find-more" href="">FIND OUT MORE</a>
-                                    </p>
+                                    <!-- <a class="find-more" href="">FIND OUT MORE</a> -->
+                                    <button class="find-more">FIND OUT MORE<span class="icon-right"></span><span class="icon-right after"></span></button>
                                 </div>
                             </div>
                         </div>
@@ -277,6 +286,7 @@
         <script src="/js/fullPage/jquery.fullPage.min.js"></script> -->
 
         <script src="{{ mix('/js/vendor.js') }}"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.min.js"></script>
 
         <script type="text/javascript">
             $(document).ready(function() {
@@ -328,16 +338,22 @@
                         }
                     },
                     afterRender: function(){
-                        $('.bayer-steps').slick({
-                          centerMode: true,
-                          centerPadding: '60px',
-                          slidesToShow: 3,
-                          arrows: false,
-                          prevArrow: '<button type="button" class="slick-prev">Previous</button>',
-                          nextArrow: '<button type="button" class="slick-next">Next</button>',
-                          autoplay: true
-                        });
+                        // $('.bayer-steps').slick({
+                        //   centerMode: true,
+                        //   centerPadding: '60px',
+                        //   slidesToShow: 3,
+                        //   arrows: false,
+                        //   prevArrow: '<button type="button" class="slick-prev">Previous</button>',
+                        //   nextArrow: '<button type="button" class="slick-next">Next</button>',
+                        //   autoplay: true
+                        // });
 
+                        $('.owl-carousel').owlCarousel({
+                            loop:true,
+                            margin:10,
+                            nav:true,
+                            center: true
+                        });
                     }
                 });
 

@@ -79,10 +79,14 @@
 @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
 
 body{
-	font-family: 'Poppins', sans-serif !important;
+	font-family: Verdana, Geneva, sans-serif !important;
 	font-size: 13px !important;
 	color: #fff !important;
 	background-color: #0090c5
+}
+
+h1, h2, h3, h4, h5, h6{
+	font-family: 'Poppins', sans-serif !important;
 }
 
 a{
@@ -98,6 +102,10 @@ a{
 .brand-right{
 	top: 20px;
 	right: 15px
+}
+
+.brand-right img{
+	height: 65px !important
 }
 
 #return-to-top {

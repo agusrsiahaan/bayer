@@ -24,6 +24,7 @@
   "dependencies": {
     "animate.css": "^3.5.2",
     "fullpage.js": "^2.9.4",
+    "owl.carousel": "^2.2.0",
     "slick-carousel": "^1.6.0"
   }
 }
