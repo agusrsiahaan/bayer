@@ -46,6 +46,8 @@ mix.js('resources/assets/js/app.js', 'public/js')
 
    .sass('resources/assets/sass/landing.scss', 'public/css/landing.css')
    
+   .copy('resources/assets/fonts', 'public/fonts')
+
    .copy('resources/assets/images', 'public/images')
    .version();
 
