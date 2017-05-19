@@ -34,15 +34,16 @@ mix.js('resources/assets/js/app.js', 'public/js')
    .scripts([
 		'node_modules/fullpage.js/dist/jquery.fullpage.min.js',
 		'node_modules/fullpage.js/vendors/jquery.slimscroll.min.js',
-		//'node_modules/slick-carousel/slick/slick.min.js'
+		'node_modules/owl.carousel/dist/owl.carousel.min.js',
    	], 'public/js/vendor.js')
 
    // .copy('node_modules/fullpage.js/dist/jquery.fullpage.min.css', 'public/css/fullPage')
 
    .styles([
 		'node_modules/fullpage.js/dist/jquery.fullpage.min.css',
-		//'node_modules/slick-carousel/slick/slick.css',
-		//'node_modules/slick-carousel/slick/slick-theme.css'
+		'node_modules/animate.css/animate.min.css',
+		'node_modules/owl.carousel/dist/assets/owl.carousel.min.css',
+		'node_modules/owl.carousel/dist/assets/owl.theme.default.min.css'
    	], 'public/css/vendor.css')
 
    .sass('resources/assets/sass/landing.scss', 'public/css/landing.css')
@@ -50,5 +51,6 @@ mix.js('resources/assets/js/app.js', 'public/js')
    .copy('resources/assets/fonts', 'public/fonts')
 
    .copy('resources/assets/images', 'public/images')
+
    .version();
 

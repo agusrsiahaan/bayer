@@ -12,9 +12,9 @@
 
         <link rel="stylesheet" href="{{ mix('/css/app.css') }}">
         <link rel="stylesheet" type="text/css" href="{{ mix('/css/vendor.css') }}">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+        <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
         <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.carousel.min.css">
-        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.theme.default.min.css">
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.theme.default.min.css"> -->
         <link rel="stylesheet" type="text/css" href="{{ mix('/css/landing.css') }}">
 
         <style type="text/css">
@@ -26,6 +26,7 @@
                  var console = { log: function() {} };
             </script>
         <![endif]-->
+        
     </head>
     <body>
         <a href="javascript:" id="return-to-top"><i class="fa fa-arrow-up" aria-hidden="true"></i></a>
@@ -116,6 +117,10 @@
                                 Start baggin’ those good stuffs from electronics to more Bayer products for your business needs!
                             </div>
                         </div>
+
+                    </div>
+                    <div class="arrow bounce">
+                      <a class="fa fa-arrow-down fa-2x" href="#"></a>
                     </div>
                 </div>
                 <div class="section second" id="section1">
@@ -148,8 +153,10 @@
                                 </p>
                             </div>
                         </div>
+                    </div>
 
-
+                    <div class="arrow bounce">
+                      <a class="fa fa-arrow-down fa-2x" href="#"></a>
                     </div>
                 </div>
                 <div class="section third" id="section2">
@@ -173,6 +180,13 @@
                                 </div>
                             </div>
                         </div>
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="divider">&nbsp;</div>
+                            </div>
+                        </div>
+
                         <div class="row benefits">
                             <div class="col-md-3">
                                 <div class="icon">
@@ -281,12 +295,8 @@
         </div>
         
         <script src="{{ mix('/js/app.js') }}"></script>
-
-       <!--  <script src="/js/fullPage/jquery.slimscroll.min.js"></script>
-        <script src="/js/fullPage/jquery.fullPage.min.js"></script> -->
-
         <script src="{{ mix('/js/vendor.js') }}"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.min.js"></script>
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.min.js"></script> -->
 
         <script type="text/javascript">
             $(document).ready(function() {
@@ -324,6 +334,12 @@
                         $isAnimatedFirst.eq(1).css('animation-delay', '.6s');
                         $isAnimatedFirst.eq(2).css('animation-delay', '.9s');
 
+                        if( index == 1 || index == 2 ){
+                            $('.arrow a').click(function(){
+                                $.fn.fullpage.moveSectionDown();
+                            });
+                        }
+
                     },
                     onLeave: function(index, nextIndex, direction) {
                         if( index == 1 && nextIndex == 2 ) { 
@@ -338,16 +354,6 @@
                         }
                     },
                     afterRender: function(){
-                        // $('.bayer-steps').slick({
-                        //   centerMode: true,
-                        //   centerPadding: '60px',
-                        //   slidesToShow: 3,
-                        //   arrows: false,
-                        //   prevArrow: '<button type="button" class="slick-prev">Previous</button>',
-                        //   nextArrow: '<button type="button" class="slick-next">Next</button>',
-                        //   autoplay: true
-                        // });
-
                         $('.owl-carousel').owlCarousel({
                             loop:true,
                             margin:10,
